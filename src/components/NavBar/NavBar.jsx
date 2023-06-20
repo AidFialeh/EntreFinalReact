@@ -12,19 +12,19 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to={`/categoria/2`}>
+            <NavLink className="miBtn" to={`/categoria/2`}>
               <strong>Hombre</strong>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to={`/categoria/3`}>
+            <NavLink className="miBtn" to={`/categoria/3`}>
               <strong>Mujer</strong>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to={`/categoria/4`}>
+            <NavLink className="miBtn" to={`/categoria/4`}>
               <strong>Niños</strong>
             </NavLink>
           </li>

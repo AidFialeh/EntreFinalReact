@@ -1,6 +1,8 @@
-import React from "react";
+import { Link } from 'react-router-dom';
 //1) Importar una función de React que me ayuda a trabajar con el estado. (useState)
 import { useState } from "react";
+import './ItemCount.css'
+
 
 const ItemCount = ({ inicial, stock, funcionAgregar }) => {
   //Acá en la parte superior del componente siempre voy a trabajr con los hooks:
@@ -24,19 +26,18 @@ const ItemCount = ({ inicial, stock, funcionAgregar }) => {
     }
   };
 
+
   return (
     <>
-      <div>
-        <button onClick={decrementar}> - </button>
-        <p> {contador} </p>
-        <button onClick={incrementar}> + </button>
-      </div>
-      <button onClick={() => funcionAgregar(contador)}>
-        {" "}
-        Agregar al Carrito{" "}
-      </button>
+        <div>
+            <button className='miBtn' onClick={ decrementar }> - </button>
+            <strong> {contador} </strong>
+            <button className='miBtn' onClick={ incrementar }> + </button>
+        </div>
+        { stock > 0 && <button className='miBtn' onClick={()=> funcionAgregar(contador)}> Agregar al Carrito </button>}
+        <Link to="/" className = "miBtn" > Seguir Comprando</Link>
     </>
-  );
+  )
 };
 
 //Incrementar y decrementar van sin parentesis porque si no se ejecutarían al momento de renderizar el componente. Y solo queremos que se ejecute cuando el visitante haga click en los botones.

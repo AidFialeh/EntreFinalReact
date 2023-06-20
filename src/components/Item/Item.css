@@ -1,5 +1,5 @@
 .cardProducto {
-    background-color: #bcbd8b;
+    background-color: #d0d0d0;
     border-radius: 10px;
     width: 15rem;
     padding: 1rem;
@@ -21,7 +21,4 @@
     width: 8rem;
     border-radius: 10px;
     border: none;
-}
-.detalle {
-    color: red;
 }
